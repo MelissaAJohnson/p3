@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Random Text
+    Random User
 @stop
 
 
@@ -18,14 +18,22 @@ such as a page specific styesheets.
 
 @section('content')
 	<hr>
-	<h1>Results - Random Text</h1>
+	<h1>Results - Random Users</h1>
 	<div class='container'>
 		<div class='scrollbox'>   
-		    <?php
-		        if (isset($paragraphs))
-		            foreach ($paragraphs as $paragraph)
-		            echo $paragraph . "<br><br>";
-		    ?>
+            <?php 
+                if (isset($users))
+                    foreach($users as $user) {
+                        echo "<b>" . $user['name'] . "</b><br>";
+                        if (isset($user['username']))
+                        	echo ("Username: ");
+                        	echo $user['username']."<br>";
+                        if (isset($user['email']))
+                        	echo ("Email: ");
+                        	echo $user['email'] . "<br>";
+                        echo "<hr>";
+                    }
+            ?>
 		</div>
 	</div>
 @stop

@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 
-Route::post('/text', 'DeveloperToolsController@postIndex');
+Route::post('/text', 'LoremIpsumController@postIndex');
+
+Route::post('/user', 'RandomUserController@postIndex');
 
 if(App::environment('local')){
 	Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

@@ -87,7 +87,7 @@
                 	<form method="POST" action='/text'>
             	    	<input type="hidden" value="{{ csrf_token() }}" name="_token">
              			Number of paragraphs&nbsp;
-                    	<select name="numberParagraphs" value = "{{ old("numberParagraphs") }}">
+                    	<select name="numberParagraphs">
                         	<option value=1 selected>1</option>
                         	<option value=2>2</option>
                         	<option value=3>3</option>
@@ -103,17 +103,31 @@
             		<form method="POST" action='/user'>
             			<input type="hidden" value="{{ csrf_token() }}" name="_token">
             			Number of users&nbsp;
-            			<select name="numberUsers" value = "{{ old("numberUsers") }}">
+            			<select name="numberUsers">
             				<option value=1 selected>1</option>
                         	<option value=2>2</option>
                         	<option value=3>3</option>
                         	<option value=4>4</option>
                         	<option value-5>5</option>
-                    	</select><br /><br />
+                    	</select><br><br />
+                        Options:<br />
+                        <input type="checkbox" name="wantsUserName"
+                            <?php
+                                if (isset($_POST["wantsUserName"]))
+                                    echo "checked";
+                            ?>
+                        > Include user name
+                        <br />
+                        <input type="checkbox" name="wantsEmail"
+                            <?php
+                                if (isset($_POST["wantsEmail"]))
+                                    echo "checked";
+                            ?>
+                        > Include email address
+                        <br /><br />
                     	<input type="submit" value = "Get Users">
                 	</form>
             	<br>
-            	<hr>
             </div>
         </div>
     </header>
