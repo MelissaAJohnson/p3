@@ -24,13 +24,9 @@ such as a page specific styesheets.
             <?php 
                 if (isset($users))
                     foreach($users as $user) {
-                        echo "<b>" . $user['name'] . "</b><br>";
-                        if (isset($user['username']))
-                        	echo ("Username: ");
-                        	echo $user['username']."<br>";
+                        echo "Username: " . $user['name'] . "<br>";
                         if (isset($user['email']))
-                        	echo ("Email: ");
-                        	echo $user['email'] . "<br>";
+                        	echo "Email:" . $user['email'] . "<br>";
                         echo "<hr>";
                     }
             ?>
