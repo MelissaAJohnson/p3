@@ -43,6 +43,7 @@
     <body>
         <div class="container">
             <div class="content">
+                <img src="/img/geek_thumbnail.jpg">&nbsp;&nbsp;
                 <div class="title">Developer's Best Friend</div>
                 <p>Ever needed random paragraphs of text to assist with designing your site?</p>
                 <p>Ever wish you didn't have to think of random user attributes to test various user permissions?</p>
