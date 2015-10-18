@@ -19,19 +19,19 @@ such as a page specific styesheets.
 @section('content')
 	<hr>
 	<h1>Results - Random Users</h1>
-	<div class='container'>
+
 		<div class='scrollbox'>   
             <?php 
                 if (isset($users))
                     foreach($users as $user) {
                         echo "Username: " . $user['name'] . "<br>";
                         if (isset($user['email']))
-                        	echo "Email:" . $user['email'] . "<br>";
+                        	echo "Email: " . $user['email'] . "<br>";
                         echo "<hr>";
                     }
             ?>
 		</div>
-	</div>
+
 @stop
 
 

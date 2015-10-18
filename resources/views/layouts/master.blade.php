@@ -16,11 +16,12 @@
 
             body {
                 margin: 0;
-                padding: 0;
+                padding: 10px;
                 width: 100%;
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
+                text-align: center;
             }
 
             footer {

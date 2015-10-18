@@ -23,7 +23,7 @@ class RandomUserController extends Controller
         //Add users to array
         for ($i=0; $i < $num_users; $i++) {
             $users[$i] = Array("name" => $faker->userName);
-            if ($email == "true") {
+            if ($email) {
                 $users[$i] = array_merge($users[$i], Array("email" => $faker->email));
             };
         }
