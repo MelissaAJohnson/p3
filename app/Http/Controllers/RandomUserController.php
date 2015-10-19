@@ -9,11 +9,6 @@ use App\Http\Controllers\Controller;
 class RandomUserController extends Controller
 {
 
-  /** Responds to requests to GET /user */
-    public function getIndex(Request $request) { 
-        return view('user.index');
-    }
-
     /** Responds to requests to POST /user */
     public function postIndex(Request $request) {
         $this->validate($request, [

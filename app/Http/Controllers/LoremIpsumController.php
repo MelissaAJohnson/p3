@@ -9,11 +9,6 @@ use App\Http\Controllers\Controller;
 class LoremIpsumController extends Controller
 {
 
-  /** Responds to requests to GET /text */
-    public function getIndex(Request $request) { 
-        return view('text.index');
-    }
-
     /** Responds to requests to POST /text */
     public function postIndex(Request $request) { 
 		$this->validate($request, [

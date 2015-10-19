@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 
-Route::get('/text', 'LoremIpsumController@getIndex');
+Route::get('/text', function () {
+	return view('text.index');
+});
 
 Route::post('/text', 'LoremIpsumController@postIndex');
 
