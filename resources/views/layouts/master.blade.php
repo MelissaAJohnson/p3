@@ -103,10 +103,10 @@
 <body>
 
     <header>
-        <a style="text-decoration: none; text-align: left; display: block;" href="http://mjproductions.biz"><- Back to project listing</a>
+        <a style="text-decoration: none; text-align: left; display: block;" href="http://mjproductions.biz">&lt;- Back to project listing</a>
  		<div class="container">
  			<div class="content">
-        		<img src="/img/geek_thumbnail.jpg">&nbsp;&nbsp;
+        		<img src="/img/geek_thumbnail.jpg" alt="geek logo">&nbsp;&nbsp;
             	<div class="title">Developer's Best Friend</div>
             	<p>Ever needed random paragraphs of text to assist with designing your site?</p>
             	<p>Ever wish you didn't have to think of random user attributes to test various user permissions?</p>
@@ -114,20 +114,14 @@
 
                 <h1>Random Text Generator</h1>
             	<p>This first tool is a lorem ipsum generator. In case you're not familiar with this, lorem ipsum is a series of characters and white spaces used to graphically illustrate elements of a document. Developers generally use these generators to ensure that their pages work with what ever text is dynamically added to a page.</p>
-            	<p>
-                	<form method="POST" action='/text#results'>
+            	<p><form method="POST" action='/text#results'>
             	    	<input type="hidden" value="{{ csrf_token() }}" name="_token">
              			Number of paragraphs&nbsp;
                     	
-                        <input type="text" name="numberParagraphs" value =
-                            <?php
-                                echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''
-                            ?>
-                        >
+                        <input type="text" name="numberParagraphs" value = <?php echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''?>>
                         <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Text">
-                	</form>
-            	</p>
+                </form></p>
 
             	<h1>Random User Generator</h1>
             	<p>Many applications provide various permission levels. When testing out the permissioning levels of these sites, it can add a lot of cognitive overhead to develop unique user profiles. Default setting of this tool provides random information for the most common user attributes.</p>
@@ -135,11 +129,7 @@
             		<form method="POST" action='/user#results'>
             			<input type="hidden" value="{{ csrf_token() }}" name="_token">
             			Number of users&nbsp;
-            			<input type="text" name="numberUsers" value =
-                            <?php 
-                                echo isset($_POST['numberUsers']) ? $_POST['numberUsers'] : '' 
-                            ?>
-                        >
+            			<input type="text" name="numberUsers" value = <?php echo isset($_POST['numberUsers']) ? $_POST['numberUsers'] : ''?>>
 
                         <br><br />
                         Options:<br />

@@ -2,7 +2,7 @@
 
 
 @section('title')
-    
+    Developer's Best Friend
 @stop
 
 
