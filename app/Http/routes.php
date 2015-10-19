@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('layouts.index');
 });
 
+Route::get('/text', 'LoremIpsumController@getIndex');
+
 Route::post('/text', 'LoremIpsumController@postIndex');
 
 Route::post('/user', 'RandomUserController@postIndex');
