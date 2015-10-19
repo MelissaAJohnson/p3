@@ -10,9 +10,14 @@ class LoremIpsumController extends Controller
 {
 
     /** Responds to requests to POST /text */
-    public function postIndex() { 
+    public function postIndex(Request $request) { 
+		$this->validate($request, [
+            'numberParagraphs' => 'required|numeric'
+            ]);
+
         $generator = new \Badcow\LoremIpsum\Generator();
         $paragraphs = $generator->getParagraphs(\Input::get("numberParagraphs"));;
         return view('text.index')->with("paragraphs", $paragraphs);
+
     }
 }

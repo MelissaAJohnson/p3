@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to Developer's Best Friend --}}
-        @yield('title', "Developer's Best Friend")
+        {{-- Yield the title if it exists, otherwise default to 'Developers Best Friend' --}}
+        @yield('title','Developers Best Friend')
     </title>
 
     <meta charset='utf-8'>
@@ -48,6 +48,12 @@
             .title {
                 text-align: center;
                 font-size: 96px;
+            }
+
+            .error {
+                text-align: center;
+                color: red;
+                font-weight: bold;
             }
 
             .scrollbox {
@@ -117,7 +123,16 @@
                                 echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''
                             ?>
                         >
-                        <br /><br />
+                        <div class="error">
+                            @if(count($errors) > 0)
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </div>
+                        <br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Text">
                 	</form>
             	</p>
