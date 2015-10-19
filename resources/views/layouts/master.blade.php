@@ -62,8 +62,31 @@
                 overflow: auto; 
                 width: 75%; 
                 height: 200px;
-                display: inline-block;;
+                display: inline-block;
             }
+
+            .btn {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.428571429;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                cursor: pointer;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+            }
+
+            .btn-warning {
+                color: #fff;
+                background-color: #f26037;
+                border-color: #f26013;
+            }
+
 
         </style>
 
@@ -74,6 +97,7 @@
 <body>
 
     <header>
+        <a style="text-decoration: none; text-align: left; display: block;" href="http://mjproductions.biz"><- Back to project listing</a>
  		<div class="container">
  			<div class="content">
         		<img src="/img/geek_thumbnail.jpg">&nbsp;&nbsp;
@@ -94,7 +118,7 @@
                             ?>
                         >
                         <br /><br />
-                    	<input type="submit" value = "Get Text">
+                    	<input class = "btn btn-warning" type="submit" value = "Get Text">
                 	</form>
             	</p>
             	<h1>Random User Generator</h1>
@@ -118,7 +142,7 @@
                             ?>
                         > Include email address
                         <br /><br />
-                    	<input type="submit" value = "Get Users">
+                    	<input class = "btn btn-warning" type="submit" value = "Get Users">
                 	</form>
             	<br>
             </div>
