@@ -18,8 +18,19 @@ such as a page specific styesheets.
 
 @section('content')
 	<hr>
-	<h1>Results - Random Text</h1>
+	<h1 id="results">Results - Random Text</h1>
 
+    <div class="error">
+        @if(count($errors) > 0)
+            
+            @foreach ($errors->all() as $error)
+                {{ $error }}</li>
+            @endforeach
+
+        @endif
+    </div>
+    <br>
+    
 	<div class='scrollbox'>   
 	    <?php
 	        if (isset($paragraphs))

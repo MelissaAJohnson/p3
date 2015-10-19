@@ -18,18 +18,30 @@ such as a page specific styesheets.
 
 @section('content')
 	<hr>
-	<h1>Results - Random Users</h1>
-		<div class='scrollbox'>   
-            <?php 
-                if (isset($users))
-                    foreach($users as $user) {
-                        echo "Username: " . $user['name'] . "<br>";
-                        if (isset($user['email']))
-                        	echo "Email: " . $user['email'] . "<br>";
-                        echo "<hr>";
-                    }
-            ?>
-		</div>
+	<h1 id="results">Results - Random Users</h1>
+
+    <div class="error">
+        @if(count($errors) > 0)
+            
+            @foreach ($errors->all() as $error)
+                {{ $error }}</li>
+            @endforeach
+
+        @endif
+    </div>
+    <br>
+    
+	<div class='scrollbox'>   
+        <?php 
+            if (isset($users))
+                foreach($users as $user) {
+                    echo "Username: " . $user['name'] . "<br>";
+                    if (isset($user['email']))
+                    	echo "Email: " . $user['email'] . "<br>";
+                    echo "<hr>";
+                }
+        ?>
+	</div>
 
 @stop
 
