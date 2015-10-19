@@ -65,7 +65,6 @@
                 display: inline-block;;
             }
 
-            
         </style>
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
@@ -88,13 +87,13 @@
                 	<form method="POST" action='/text'>
             	    	<input type="hidden" value="{{ csrf_token() }}" name="_token">
              			Number of paragraphs&nbsp;
-                    	<select name="numberParagraphs">
-                        	<option value=1 selected>1</option>
-                        	<option value=2>2</option>
-                        	<option value=3>3</option>
-                        	<option value=4>4</option>
-                        	<option value-5>5</option>
-                    	</select><br /><br />
+                    	
+                        <input type="text" name="numberParagraphs" value =
+                            <?php
+                                echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''
+                            ?>
+                        >
+                        <br /><br />
                     	<input type="submit" value = "Get Text">
                 	</form>
             	</p>
@@ -104,7 +103,12 @@
             		<form method="POST" action='/user'>
             			<input type="hidden" value="{{ csrf_token() }}" name="_token">
             			Number of users&nbsp;
-            			<input type="text" name="numberUsers">
+            			<input type="text" name="numberUsers" value =
+                            <?php 
+                                echo isset($_POST['numberUsers']) ? $_POST['numberUsers'] : '' 
+                            ?>
+                        >
+
                         <br><br />
                         Options:<br />
                         <input type="checkbox" name="wantsEmail"
