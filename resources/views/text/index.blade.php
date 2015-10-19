@@ -19,15 +19,15 @@ such as a page specific styesheets.
 @section('content')
 	<hr>
 	<h1>Results - Random Text</h1>
-	<div class='container'>
-		<div class='scrollbox'>   
-		    <?php
-		        if (isset($paragraphs))
-		            foreach ($paragraphs as $paragraph)
-		            echo $paragraph . "<br><br>";
-		    ?>
-		</div>
+
+	<div class='scrollbox'>   
+	    <?php
+	        if (isset($paragraphs))
+	            foreach ($paragraphs as $paragraph)
+	            echo $paragraph . "<br><br>";
+	    ?>
 	</div>
+
 @stop
 
 

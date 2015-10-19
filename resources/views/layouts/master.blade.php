@@ -111,7 +111,17 @@
             	<p>Ever needed random paragraphs of text to assist with designing your site?</p>
             	<p>Ever wish you didn't have to think of random user attributes to test various user permissions?</p>
             	<p>You've come to the right spot. This page delivers easy-to-use and flexible tools to help with these common developer needs.</p>
-            	<h1>Random Text Generator</h1>
+            	<div class="error">
+                    @if(count($errors) > 0)
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div>
+
+                <h1>Random Text Generator</h1>
             	<p>This first tool is a lorem ipsum generator. In case you're not familiar with this, lorem ipsum is a series of characters and white spaces used to graphically illustrate elements of a document. Developers generally use these generators to ensure that their pages work with what ever text is dynamically added to a page.</p>
             	<p>
                 	<form method="POST" action='/text'>
@@ -123,19 +133,11 @@
                                 echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''
                             ?>
                         >
-                        <div class="error">
-                            @if(count($errors) > 0)
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
-                        </div>
-                        <br />
+                        <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Text">
                 	</form>
             	</p>
+
             	<h1>Random User Generator</h1>
             	<p>Many applications provide various permission levels. When testing out the permissioning levels of these sites, it can add a lot of cognitive overhead to develop unique user profiles. Default setting of this tool provides random information for the most common user attributes.</p>
             	<p>

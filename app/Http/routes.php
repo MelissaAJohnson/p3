@@ -19,6 +19,8 @@ Route::get('/text', 'LoremIpsumController@getIndex');
 
 Route::post('/text', 'LoremIpsumController@postIndex');
 
+Route::get('/user', 'RandomUserController@getIndex');
+
 Route::post('/user', 'RandomUserController@postIndex');
 
 if(App::environment('local')){

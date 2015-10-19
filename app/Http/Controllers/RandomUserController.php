@@ -9,8 +9,18 @@ use App\Http\Controllers\Controller;
 class RandomUserController extends Controller
 {
 
+  /** Responds to requests to GET /user */
+    public function getIndex(Request $request) { 
+        return view('user.index');
+    }
+
     /** Responds to requests to POST /user */
-    public function postIndex() {
+    public function postIndex(Request $request) {
+        $this->validate($request, [
+            'numberUsers' => 'required|numeric'
+            ]);
+
+        //Code to package that creates fake information
         $faker = \Faker\Factory::create();
 
         //Grab form input fields
