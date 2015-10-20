@@ -9,7 +9,7 @@ The purpose of this application is to provide tools devlopers can use for testin
 + field validation (blank and non-numeric)
 + anchor to results/errors
 
-**Production Site**: [p3.mjproductions.biz](http://www.p3.mjproductions.biz)
+**Production Site**: [p3.mjproductions.biz](http://p3.mjproductions.biz)
 
 **Screencast**: [M Johnson DWA P3](https://youtu.be/V-WcWAGGZ9U)
 
