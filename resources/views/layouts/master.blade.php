@@ -114,14 +114,16 @@
 
                 <h1>Random Text Generator</h1>
             	<p>This first tool is a lorem ipsum generator. In case you're not familiar with this, lorem ipsum is a series of characters and white spaces used to graphically illustrate elements of a document. Developers generally use these generators to ensure that their pages work with what ever text is dynamically added to a page.</p>
-            	<p><form method="POST" action='/text#results'>
+            	<p>
+                    <form method="POST" action='/text#results'>
             	    	<input type="hidden" value="{{ csrf_token() }}" name="_token">
              			Number of paragraphs&nbsp;
                     	
                         <input type="text" name="numberParagraphs" value = <?php echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''?>>
                         <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Text">
-                </form></p>
+                    </form>
+                </p>
 
             	<h1>Random User Generator</h1>
             	<p>Many applications provide various permission levels. When testing out the permissioning levels of these sites, it can add a lot of cognitive overhead to develop unique user profiles. Default setting of this tool provides random information for the most common user attributes.</p>
