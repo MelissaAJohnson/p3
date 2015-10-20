@@ -146,6 +146,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Melissajstudent\SimplePassword\SimplePasswordServiceProvider::class,
+
 
     ],
 
