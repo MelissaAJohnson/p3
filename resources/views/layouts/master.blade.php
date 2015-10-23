@@ -144,6 +144,7 @@
                         <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Users">
                 	</form>
+                </p>
             	<br>
             </div>
         </div>
