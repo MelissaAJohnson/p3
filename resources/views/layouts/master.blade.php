@@ -119,7 +119,7 @@
             	    	<input type="hidden" value="{{ csrf_token() }}" name="_token">
              			Number of paragraphs&nbsp;
                     	
-                        <input type="text" name="numberParagraphs" value = <?php echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''?>>
+                        <input type="text" name="numberParagraphs" value = "<?php echo isset($_POST['numberParagraphs']) ? $_POST['numberParagraphs'] : ''?>">
                         <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Text">
                     </form>
@@ -131,7 +131,7 @@
             		<form method="POST" action='/user#results'>
             			<input type="hidden" value="{{ csrf_token() }}" name="_token">
             			Number of users&nbsp;
-            			<input type="text" name="numberUsers" value = <?php echo isset($_POST['numberUsers']) ? $_POST['numberUsers'] : ''?>>
+            			<input type="text" name="numberUsers" value = "<?php echo isset($_POST['numberUsers']) ? $_POST['numberUsers'] : ''?>">
 
                         <br><br />
                         Options:<br />
