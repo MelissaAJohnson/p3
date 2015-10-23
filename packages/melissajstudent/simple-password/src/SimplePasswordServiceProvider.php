@@ -13,7 +13,7 @@ class SimplePasswordServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(__DIR__.'/views', 'SimplePassword');
     }
 
     /**
@@ -23,6 +23,6 @@ class SimplePasswordServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->make('Melissajstudent\SimplePassword\SimplePasswordController');
     }
 }
