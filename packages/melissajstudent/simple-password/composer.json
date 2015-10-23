@@ -1,0 +1,12 @@
+{
+    "name": "melissajstudent/simple-password",
+    "description": "A simple XKCD password generator",
+    "authors": [
+        {
+            "name": "Melissa Johnson",
+            "email": "melissajohnson@g.harvard.edu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
