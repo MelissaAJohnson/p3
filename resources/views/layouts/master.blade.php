@@ -127,7 +127,7 @@
 
             	<h1>Random User Generator</h1>
             	<p>Many applications provide various permission levels. When testing out the permissioning levels of these sites, it can add a lot of cognitive overhead to develop unique user profiles. Default setting of this tool provides random information for the most common user attributes.</p>
-            	<p>
+            
             		<form method="POST" action='/user#results'>
             			<input type="hidden" value="{{ csrf_token() }}" name="_token">
             			Number of users&nbsp;
@@ -144,7 +144,7 @@
                         <br /><br />
                     	<input class = "btn btn-warning" type="submit" value = "Get Users">
                 	</form>
-                </p>
+                
             	<br>
             </div>
         </div>
